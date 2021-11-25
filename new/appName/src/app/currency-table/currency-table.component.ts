@@ -22,14 +22,7 @@ arr:any[]=[]
   onSelectKind(){
     this.http.get<Map<number,DateCurrenctRate[]>>(`${environment.endPoint}Coins/GetExchangeRate?kind=${this.currKind}`)
     .subscribe((data: Map<number,DateCurrenctRate[]>) => {
-      console.log(data);
             this.CurrencyDic=data;
-            // this.arr = this.CurrencyDic.
-      
-      // <span *ngFor="let i of CurrencyDic[0]">{item.Date}}</span>
-
-      // this.values = this.CurrencyDic.values()
-    
     });
   }
 

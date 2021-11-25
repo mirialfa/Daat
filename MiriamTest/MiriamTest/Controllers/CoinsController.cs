@@ -104,17 +104,3 @@ namespace MiriamTest.Controllers
         }
     }
 }
-
-
-//namespace Test.Controllers
-//{
-//    [Produces("application/json")]
-//    [Route("api/Coins")]
-//    public class CoinsController : Controller
-//    {
-
-
-
-
-//    }
-//}
