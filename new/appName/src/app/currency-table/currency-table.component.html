@@ -1,0 +1,52 @@
+<div class="week">
+<input type="radio" name="kind" value="1" [(ngModel)]="currKind" (change)="onSelectKind() "/>שבועי<br>
+</div>
+<div class="month">
+<input type="radio" name="kind" value="2" [(ngModel)]="currKind" (change)="onSelectKind()"/>חצי שנתי
+</div>
+<div *ngIf="CurrencyDic">
+
+    <!-- <div>titles
+        <span *ngFor="let item of CurrencyDic| keyvalue; let i=index" class="col-md-2">
+            
+         {{item.value[i].Date |date: 'shortDate'}} &nbsp;</span>
+    </div> -->
+
+
+    
+
+    <!-- <div *ngFor="let row of CurrencyDic | keyvalue" class="row no-gutters" style="direction: rtl;">
+       
+        <span *ngFor="let col of row.value" class="col-md-2">{{col.Currency.Rate}} &nbsp; {{col.Currency.Name}}</span>
+       
+    </div> -->
+
+
+    
+</div>
+<table>
+    <tr>
+        <th  class="col-md-2">CoinName</th>
+        <th >
+            <span *ngFor="let item of CurrencyDic| keyvalue; let i=index" class="col-md-2">
+            
+                {{item.value[i].Date |date: 'shortDate'}} &nbsp;</span>
+        </th>
+    </tr>
+    <tr>
+        <td>
+            <div *ngFor="let row of CurrencyDic | keyvalue;let i=index" style="direction: rtl;">
+      <span>{{row.value[i].Currency.Name}}</span>
+                <!-- <span *ngFor="let col of row.value" class="col-md-2">{{col.Currency.Rate}} &nbsp; {{col.Currency.Name}}</span>@@@ -->
+               
+            </div>
+        </td>
+         <td>
+            <div *ngFor="let row of CurrencyDic | keyvalue" class="row no-gutters" style="direction: rtl;">
+      
+                <span *ngFor="let col of row.value" class="col-md-2">{{col.Currency.Rate}} </span>
+               
+            </div>
+       </td> 
+    </tr>
+</table>

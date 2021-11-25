@@ -1,0 +1,12 @@
+.week{
+    direction: rtl;
+    margin-top: 20px;
+    margin-left:1200px;
+    color: red;
+}
+.month{
+    direction: rtl;
+    margin-top: 50px;
+    margin-left:1180px;
+    color: red;
+}
